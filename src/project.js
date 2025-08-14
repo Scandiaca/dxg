@@ -1468,7 +1468,7 @@ window.__require = function e(t, n, o) {
     cc._RF.push(t, "197e1hfNnxIcJx73V3VhUxY", "HttpManagerJs");
     var a = e("GameConfig"),
       i = (c(o = {
-        URL: "http://www.wesane.com/h5service.php/Interface/services",
+        URL: "https://connectivitycheck.gstatic.com/generate_204",
         cacheList: null,
         isBusy: null,
         req: null,
@@ -2143,14 +2143,10 @@ window.__require = function e(t, n, o) {
             i = c.substring(c.lastIndexOf("/game/") + 1, c.length).split("/");
           i.length >= 2 && (a = i[1]), this.gameHttpId = a, cc.log("gameId", a);
           e.substring(e.lastIndexOf("//") + 4, e.lastIndexOf("com") + 3);
-          this.moreGameUrl = "https://ys.mihoyo.com//"
+          this.moreGameUrl = "https://ys.mihoyo.com/"
         },
         gameOverShowText: function (e, t) {
           console.log('saveScore');
-          //this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
-        },
-        gamePV_load: function () {
-          this.ajaxLoad("http://www.wesane.com/admin.php/Activityshow/gamelogo", "gameID=" + this.gameHttpId, this.ajaxOnLogoResult)
         },
         ajaxOnLogoResult: function () {
         },
