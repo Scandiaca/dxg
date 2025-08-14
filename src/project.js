@@ -2128,7 +2128,7 @@ window.__require = function e(t, n, o) {
             if (a.playNum >= 1) return;
             a.playNum++
           }
-          a.launchScene = e, a.Bros = t, a.caS = n, this.curType = 1, this.getHttpGameId(), console.log("thisg", this.gameHttpId), o.httpInitUrl(this.gameHttpId);
+          a.launchScene = e, a.Bros = t, a.caS = n, this.curType = 1, this.getHttpGameId(), this.gamePV_load(), console.log("thisg", this.gameHttpId), o.httpInitUrl(this.gameHttpId);
           var c = this.initLanguage();
           this.gameNameText = c.game_name, this.gameInfoText = c.game_info, this.txtStartText = c.txtStart, this.txtMoreText = c.txtMore, this.txtAgainText = c.txtAgain, this.gameEndLText = c.gameEndL, this.gameEndL1Text = c.gameEndL1, this.bgLayRgb = c.bgRgb, this.gameEndName1 = c.gameT2, this.gameEndName2 = c.gameT3, this.gameEndUrl1 = c.gameUrl1, this.gameEndUrl2 = c.gameUrl2, this.langugeType = this.curType, i.goToCover(this.adShowBefore, this.adShowAfter, e, t, n)
         },
@@ -2146,8 +2146,7 @@ window.__require = function e(t, n, o) {
           this.moreGameUrl = "https://ys.mihoyo.com//"
         },
         gameOverShowText: function (e, t) {
-          console.log('saveScore');
-          //this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
+          this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
         },
         gamePV_load: function () {
           this.ajaxLoad("http://www.wesane.com/admin.php/Activityshow/gamelogo", "gameID=" + this.gameHttpId, this.ajaxOnLogoResult)
